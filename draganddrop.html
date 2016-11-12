@@ -1,0 +1,125 @@
+<html>
+<head>
+
+
+<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<title>Drag-Drop with ContentEditable</title>
+</head>
+
+<style>
+
+/* tooltip link */
+/*#draggable1,#draggable2{
+	font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
+    letter-spacing: .01rem;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 1.58;
+    letter-spacing: -.003em;
+    padding:20px;
+}*/
+
+
+
+
+
+
+.item {
+    margin: 10px;
+    padding: 0px 10px 10px 5px;
+    border: 1px solid #ddd;
+    background:#fff;
+    border-radius: 8px;
+}
+
+.handle {
+    width:12px;
+    margin: 5px 0 0 0;
+    height:34px;
+    /*float: left;*/
+    cursor: move;
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIW2OcN2/efwYgSEpKYgTRjBgCIFFkAFaGDAC2jQgFaRPeawAAAABJRU5ErkJggg==) repeat;
+}
+</style>
+
+<body>
+
+
+<div class="container">
+  <div class="row">
+    <div id="sortable" class="ui-sortable">
+      <div id="item1" class="item col-xs-11">
+      <div class="row">
+      <div class="col-xs-1">
+      	<div class="handle"></div>
+      </div>
+      <div class="col-xs-11" contenteditable="true">
+      	
+      	Hello the purpose of this was to make content-editable work with drag and drop property of jquery.
+        Hello the purpose of this was to make content-editable work with drag and drop property of jquery.
+        Hello the purpose of this was to make content-editable work with drag and drop property of jquery.
+           
+      </div>
+      </div>  
+       </div> <!-- /item -->
+
+
+
+       <div id="item2" class="item col-xs-11">
+      <div class="row">
+      <div class="col-xs-1">
+      	<div class="handle"></div>
+      </div>
+      <div class="col-xs-11" contenteditable="true">
+          
+          	  Hello the purpose of this was to make content-editable work with drag and drop property of jquery.
+              Hello the purpose of this was to make content-editable work with drag and drop property of jquery.
+              Hello the purpose of this was to make content-editable work with drag and drop property of jquery.
+       
+
+      </div>
+      </div>  
+       </div> <!-- /item -->
+       <div id="item3" class="item col-xs-11">
+      <div class="row">
+      <div class="col-xs-1">
+      	<div class="handle"></div>
+      </div>
+      <div class="col-xs-11" contenteditable="true">
+      	
+      	  
+          	 Hello the purpose of this was to make content-editable work with drag and drop property of jquery.
+             Hello the purpose of this was to make content-editable work with drag and drop property of jquery.
+             Hello the purpose of this was to make content-editable work with drag and drop property of jquery.
+          
+
+      </div>
+      </div>  
+       </div> <!-- /item -->
+    </div> <!-- /sortable -->
+  </div> <!-- /row -->
+</div> <!-- /container -->
+
+<script>
+
+
+
+$(document).ready(function() {
+
+    $(function() {
+      $("#sortable").sortable({handle: '.handle'});
+    });
+    
+});
+	
+
+ 
+
+</script>
+</body>
+</html>
